@@ -153,11 +153,14 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	function displayResult() {
 		var result = document.getElementById("result");
 		if (allergy_count > cold_count) {
-			result.innerHTML = "It looks like you might have allergies.";
+			result.innerHTML = allergy_count;
+			result.innerHTML = cold_count;
 		} else if (cold_count > allergy_count) {
-			result.innerHTML = "It looks like you might have a cold.";
+			result.innerHTML = allergy_count;
+			result.innerHTML = cold_count;
 		} else {
-			result.innerHTML = "It's difficult to determine based on your answers. Please consult a doctor for a proper diagnosis.";
+			result.innerHTML = allergy_count;
+			result.innerHTML = cold_count;
 		}
 	}
 
