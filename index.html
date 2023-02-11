@@ -110,7 +110,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p>Do you have a fever?</p>
+		<p>Do you have a fever?</p><!This is question 3>
 		<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> Yes </a> <!This is for the yes button>
          	<a href="#three"  onclick="allergyAdd();;" class="w3-btn w3-black"> No </a> <!This is for the no button>
 	</div>
@@ -138,40 +138,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
     	</div>
-<body>
-  <div class="page" id="five">
-	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Result</h1>
-	</div>
-
-	<div id="content" class="w3-container">
-		<p id="result"></p>
-	</div>
-</div>
-
-<script>
-	function displayResult() {
-		var result = document.getElementById("result");
-		if (allergy_count > cold_count) {
-			result.innerHTML = allergy_count;
-			result.innerHTML = cold_count;
-		} else if (cold_count > allergy_count) {
-			result.innerHTML = allergy_count;
-			result.innerHTML = cold_count;
-		} else {
-			result.innerHTML = allergy_count;
-			result.innerHTML = cold_count;
-		}
-	}
-
-	window.addEventListener("load", function() {
-		displayResult();
-	});
-</script>
-
-</body>
-
-
 </div>	 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
