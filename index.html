@@ -100,71 +100,71 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <div id="content" class="w3-container">
 	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p> <!--question prompting user to start the website-->
 	
-	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
+	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a> <!--Get started button-->
 	
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p> <!--Disclaimer so noone will take the results seriously and die-->
 
-<div class="page" id="one">
+<div class="page" id="one"> <!--Page 1-->
 	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Question 1</h1>
+		<h1>Question 1</h1> <!--Question 1 heading-->
 	</div>
 	
     	<div id="content" class="w3-container">
         <p>Are your eyes watery or itchy?</p>   <!--This is a question that asks users if they have watery or itchy eyes--> 
-		<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a> <!--This is for the yes button, which has the function allergyadd within it to trigger adding to allergy_count-->
-         	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black"> No </a> <!--This is for the no buttom, which has the function coldadd within it to trigger addind to the cold count-->
+		<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a> <!--This is for the yes button, which has the function allergyadd within it to trigger adding to allergy_count jump to page 2-->
+         	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black"> No </a> <!--This is for the no buttom, which has the function coldadd within it to trigger adding to the cold count jump to page 2-->
 
 
     	</div>
 </div>
 
-<div class="page" id="two">
+<div class="page" id="two"> <!--Page 2-->
 	<div class="w3-container w3-flat-carrot">
-		<h1>Question 2</h1>
+		<h1>Question 2</h1> <!--Question 2 heading-->
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p>Do you have a fever?</p><!--This is question 3-->
-		<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> Yes </a> <!--This is for the yes button-->
-         	<a href="#three"  onclick="allergyAdd();;" class="w3-btn w3-black"> No </a> <!--This is for the no button, which has the function allergyadd within it to trigger adding to allergy_count-->
+		<p>Do you have a fever?</p><!--This is a question that asks the users if they have a fever-->
+		<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> Yes </a> <!--This is for the yes button which has the function coldadd within it to trigger adding to the cold count jump to page 3-->
+         	<a href="#three"  onclick="allergyAdd();;" class="w3-btn w3-black"> No </a> <!--This is for the no button, which has the function allergyadd within it to trigger adding to allergy_count jump to page 3-->
 	</div>
 </div>	
-<div class="page" id="three">
+<div class="page" id="three"> <!--Page 3-->
 	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Question 3</h1>
+		<h1>Question 3</h1> <!--Question 3 heading-->
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Do you have a sore throat?</p>   <!--This is question 3--> 
-		<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black"> Yes </a> <!--This is for the yes button-->
-         	<a href="#four"  onclick="allergyAdd();;" class="w3-btn w3-black"> No </a> <!--This is for the no button,which has the function allergyadd within it to trigger adding to allergy_count-->
+        <p>Do you have a sore throat?</p>   <!--This is a question that asks the users if they have a sore throat--> 
+		<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black"> Yes </a> <!--This is for the yes button which has the function coldadd within it to trigger adding to the cold count jump to page 4-->
+         	<a href="#four"  onclick="allergyAdd();;" class="w3-btn w3-black"> No </a> <!--This is for the no button,which has the function allergyadd within it to trigger adding to allergy_count jump to page 4-->
     	</div>
 </div>
-<div class="page" id="four">
+<div class="page" id="four"> <!--Page 4-->
 	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Question 4</h1>
+		<h1>Question 4</h1> <!--Question 4 heading-->
 	</div>
 
     	<div id="content" class="w3-container">
         <p>Are your symptoms seasonal or chronic?</p>   <!--This is question 4--> 
-		<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a> <!--This is for the yes button-->
-         	<a href="#five"  onclick="coldAdd();" class="w3-btn w3-black"> No </a> <!--This is for the no button-->
+		<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a> <!--This is for the yes button which has the function allergyadd within it to trigger adding to allergy_count jump to page 5-->
+         	<a href="#five"  onclick="coldAdd();" class="w3-btn w3-black"> No </a> <!--This is for the no button which has the function coldadd within it to trigger adding to the cold count and jump to page 5-->
          	
 
     	</div>
 </div>
 
-<div class="page" id="five">
+<div class="page" id="five">  <!--Page 5-->
   <div id="header" class="w3-container w3-flat-carrot">
-    <h1>Results</h1>
+    <h1>Results</h1> <!--Results heading-->
   </div>
 
   <div id="content" class="w3-container">
     </p> you may have:</p>
     <p id="result"></p>
-    <a href="#five"  onclick="getResults();" class="w3-btn w3-black"> Results </a>
+    <a href="#five"  onclick="getResults();" class="w3-btn w3-black"> Results </a> <!--This is the result button, which triggers the function getResult, which then print out a statement diagnosing the user's illness based on their inputs.-->
     <script>
     //document.write(allergy_count);
     //document.write(cold_count);
