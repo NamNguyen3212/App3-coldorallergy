@@ -37,12 +37,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <script>
         var allergy_count = 0;//This is the variable for allergy count inputs from users
-        var cold_count = 0; //This is the variable for the cold count inputs from users
+        var cold_count = 0;//This is the variable for the cold count inputs from users
         var total = 4;//This is the total number of inputs from users, regardless of yes/no choices
 
 
         function allergyAdd(){
             allergy_count = allergy_count + 1;//This is the function that will add up and keep track of the allergy inputs from users
+		
 		
 
         }
@@ -63,8 +64,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
           document.write((cold_count/total)*100);//Calculates and writes the probability of someone having a cold
           document.write("% chance of you having a cold");//Writes the rest of the result statement
           }
-          else //for when allergy_count=cold_count
-          { document.write("The results are inconclusive, please see a health professional.");}//writes the inconclusive result when cold count=allergy count. 
+          else  //for when allergy_count=cold_count
+          { document.write("The results are inconclusive, please see a health professional.");} //writes the inconclusive result when cold count=allergy count.
         }
   </script>
 
@@ -83,7 +84,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     left: -100vw;
     overflow-y: auto;
     z-index: 0;
-    background-color: hsl(116%,73%,64%);
+    background-color: hsl(0,0%,100%);
 }
 
   .page:target {
@@ -98,7 +99,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p> <!--question prompting user to start the website-->
+	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>  <!--question prompting user to start the website-->
 	
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a> <!--Get started button-->
 	
@@ -106,15 +107,17 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p> <!--Disclaimer so noone will take the results seriously and die-->
 
+
 <div class="page" id="one"> <!--Page 1-->
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 1</h1> <!--Question 1 heading-->
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Are your eyes watery or itchy?</p>   <!--This is a question that asks users if they have watery or itchy eyes--> 
+        <p>Are your eyes watery or itchy?</p>   <!--This is a question that asks users if they have watery or itchy eyes-->  
 		<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a> <!--This is for the yes button, which has the function allergyadd within it to trigger adding to allergy_count jump to page 2-->
          	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black"> No </a> <!--This is for the no buttom, which has the function coldadd within it to trigger adding to the cold count jump to page 2-->
+
 
 
     	</div>
@@ -122,12 +125,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <div class="page" id="two"> <!--Page 2-->
 	<div class="w3-container w3-flat-carrot">
-		<h1>Question 2</h1> <!--Question 2 heading-->
+		<h1>Question 2</h1>  <!--Question 2 heading-->
 	</div>
 	
 	<div id="content" class="w3-container">
 		<p>Do you have a fever?</p><!--This is a question that asks the users if they have a fever-->
-		<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> Yes </a> <!--This is for the yes button which has the function coldadd within it to trigger adding to the cold count jump to page 3-->
+		<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> Yes </a>  <!--This is for the yes button which has the function coldadd within it to trigger adding to the cold count jump to page 3-->
          	<a href="#three"  onclick="allergyAdd();;" class="w3-btn w3-black"> No </a> <!--This is for the no button, which has the function allergyadd within it to trigger adding to allergy_count jump to page 3-->
 	</div>
 </div>	
