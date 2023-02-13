@@ -26,7 +26,7 @@ https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
 	
-   <head> 
+  <head> 
       <title>Cold and Allergy diagnosis</title>  
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="apple-mobile-web-app-capable" content="yes">
@@ -38,18 +38,34 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <script>
         var allergy_count = 0;
         var cold_count = 0;
+        var total = 4;
 
 
         function allergyAdd(){
             allergy_count = allergy_count + 1;
-		alert(allergy_count);
+		
 
         }
 
         function coldAdd(){
             cold_count = cold_count + 1;
         }
-
+        
+        function getResults(){
+          if(allergy_count>cold_count)
+          {document.write("There is a ");
+          document.write((allergy_count/total)*100);
+          document.write("% chance of you having allergies");
+          
+          }
+          else if (cold_count>allergy_count)
+          {document.write("There is a ");
+          document.write((cold_count/total)*100);
+          document.write("% chance of you having a cold");
+          }
+          else 
+          { document.write("The results are inconclusive, please see a health professional.");}
+        }
   </script>
 
 
@@ -96,9 +112,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Are your eyes watery or itchy?</p>   <!This is question 1> 
-		<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a> <!This is for the yes button>
-         	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black"> No </a> <!This is for the no button>
+        <p>Are your eyes watery or itchy?</p>   <!--This is question 1--> 
+		<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a> <!--This is for the yes button-->
+         	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black"> No </a> <!--This is for the no button-->
 
 
     	</div>
@@ -110,9 +126,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p>Do you have a fever?</p><!This is question 3>
-		<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> Yes </a> <!This is for the yes button>
-         	<a href="#three"  onclick="allergyAdd();;" class="w3-btn w3-black"> No </a> <!This is for the no button>
+		<p>Do you have a fever?</p><!--This is question 3-->
+		<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> Yes </a> <!--This is for the yes button-->
+         	<a href="#three"  onclick="allergyAdd();;" class="w3-btn w3-black"> No </a> <!--This is for the no button-->
 	</div>
 </div>	
 <div class="page" id="three">
@@ -121,24 +137,43 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Do you have a sore throat?</p>   <!This is question 3> 
-		<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black"> Yes </a> <!This is for the yes button>
-         	<a href="#four"  onclick="allergyAdd();;" class="w3-btn w3-black"> No </a> <!This is for the no button>
+        <p>Do you have a sore throat?</p>   <!--This is question 3--> 
+		<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black"> Yes </a> <!--This is for the yes button-->
+         	<a href="#four"  onclick="allergyAdd();;" class="w3-btn w3-black"> No </a> <!--This is for the no button-->
     	</div>
 </div>
 <div class="page" id="four">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 4</h1>
 	</div>
-	
-    	<div id="content" class="w3-container">
-        <p>Are your symptoms seasonal or chronic?</p>   <!This is question 1> 
-		<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a> <!This is for the yes button>
-         	<a href="#five"  onclick="coldAdd();" class="w3-btn w3-black"> No </a> <!This is for the no button>
 
+    	<div id="content" class="w3-container">
+        <p>Are your symptoms seasonal or chronic?</p>   <!--This is question 4--> 
+		<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a> <!--This is for the yes button-->
+         	<a href="#five"  onclick="coldAdd();" class="w3-btn w3-black"> No </a> <!--This is for the no button-->
+         	
 
     	</div>
-</div>	 
+</div>
+
+<div class="page" id="five">
+  <div id="header" class="w3-container w3-flat-carrot">
+    <h1>Results</h1>
+  </div>
+
+  <div id="content" class="w3-container">
+    </p> you may have:</p>
+    <p id="result"></p>
+    <a href="#five"  onclick="getResults();" class="w3-btn w3-black"> Results </a>
+    <script>
+    //document.write(allergy_count);
+    //document.write(cold_count);
+   </script>
+  </div>
+</div>
+
+
+	 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>
