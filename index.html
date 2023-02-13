@@ -36,35 +36,35 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
-        var allergy_count = 0;
-        var cold_count = 0;
-        var total = 4;
+        var allergy_count = 0;//This is the variable for allergy count inputs from users
+        var cold_count = 0;<!--This is the variable for the cold count inputs from users-->
+        var total = 4;<!--This is the total number of inputs from users, regardless of yes/no choices-->
 
 
         function allergyAdd(){
-            allergy_count = allergy_count + 1;
+            allergy_count = allergy_count + 1;<!--This is the function that will add up and keep track of the allergy inputs from users>
 		
 
         }
 
         function coldAdd(){
-            cold_count = cold_count + 1;
+            cold_count = cold_count + 1;<!--This is the function that will add up and keep track of the cold inputs from users>
         }
         
         function getResults(){
-          if(allergy_count>cold_count)
-          {document.write("There is a ");
-          document.write((allergy_count/total)*100);
-          document.write("% chance of you having allergies");
+          if(allergy_count>cold_count)//condition for this part of the function to trigger
+          {document.write("There is a ");//Writes a part of the result statement
+          document.write((allergy_count/total)*100);//Calculates and writes the probability of someone having allergies
+          document.write("% chance of you having allergies");//Writes the rest of the result statement
           
           }
-          else if (cold_count>allergy_count)
-          {document.write("There is a ");
-          document.write((cold_count/total)*100);
-          document.write("% chance of you having a cold");
+          else if (cold_count>allergy_count)//condition for this part of the function to trigger
+          {document.write("There is a ");//Writes a part of the result statement
+          document.write((cold_count/total)*100);//Calculates and writes the probability of someone having a cold
+          document.write("% chance of you having a cold");//Writes the rest of the result statement
           }
-          else 
-          { document.write("The results are inconclusive, please see a health professional.");}
+          else //for when allergy_count=cold_count
+          { document.write("The results are inconclusive, please see a health professional.");}//writes the inconclusive result when cold count=allergy count. 
         }
   </script>
 
